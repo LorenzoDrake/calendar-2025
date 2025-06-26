@@ -23,6 +23,9 @@
             padding: 20px;
             background-color: #f5f7fa;
             color: var(--text-color);
+    	    transform: scale(0.9) translateY(-80px);
+	    overflow-y: overlay; 
+	    max-height: 90vh;
         }
 
         h1 {
@@ -187,6 +190,29 @@
                 grid-template-columns: 1fr;
             }
         }
+
+.save-button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.save-button:hover {
+    background-color: #124e6d;
+    transform: translateY(-1px);
+}
+
+.save-button:active {
+    transform: translateY(1px);
+}
+
     </style>
 </head>
 <body>
@@ -217,7 +243,7 @@
     </div>
 
     <div style="text-align: center; margin: 30px;">
-        <button onclick="saveToFirebase()">Сохранить данные</button>
+        <button class="save-button" onclick="saveToFirebase()">Сохранить данные</button>
     </div>
 
     <!-- Firebase SDK -->
